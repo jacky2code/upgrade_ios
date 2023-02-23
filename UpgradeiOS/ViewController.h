@@ -6,8 +6,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "BaseLogicController.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : BaseLogicController
 
 
 @end

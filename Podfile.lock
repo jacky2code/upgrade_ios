@@ -1,0 +1,20 @@
+PODS:
+  - MyLayout (1.9.8)
+  - YYModel (1.0.4)
+
+DEPENDENCIES:
+  - MyLayout
+  - YYModel
+
+SPEC REPOS:
+  trunk:
+    - MyLayout
+    - YYModel
+
+SPEC CHECKSUMS:
+  MyLayout: 6ca47dbf27648aa011496094cfe1162217e3c912
+  YYModel: 2a7fdd96aaa4b86a824e26d0c517de8928c04b30
+
+PODFILE CHECKSUM: 018d8d3c71a5f5ff8a6eb7fd1180d63e7f80bc3c
+
+COCOAPODS: 1.11.3
