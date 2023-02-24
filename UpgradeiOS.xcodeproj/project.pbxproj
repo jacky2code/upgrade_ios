@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		11F7149FBFEA0D0049E9896F /* Pods_UpgradeiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B78D29ED927E8BF33ED2F3D4 /* Pods_UpgradeiOSTests.framework */; };
+		8515966629A85DD300A6DEB0 /* SplashController.m in Sources */ = {isa = PBXBuildFile; fileRef = 8515966529A85DD300A6DEB0 /* SplashController.m */; };
+		8515966B29A8634B00A6DEB0 /* DateUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = 8515966A29A8634B00A6DEB0 /* DateUtil.m */; };
+		8515966F29A867E900A6DEB0 /* R.m in Sources */ = {isa = PBXBuildFile; fileRef = 8515966E29A867E900A6DEB0 /* R.m */; };
 		85E1D73A29A7337D001728F8 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D73929A7337D001728F8 /* AppDelegate.m */; };
 		85E1D74029A7337D001728F8 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 85E1D73F29A7337D001728F8 /* ViewController.m */; };
 		85E1D74529A73383001728F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 85E1D74429A73383001728F8 /* Assets.xcassets */; };
@@ -54,6 +57,12 @@
 		3455E61EF282D9DF76BF1C38 /* Pods-UpgradeiOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpgradeiOSTests.debug.xcconfig"; path = "Target Support Files/Pods-UpgradeiOSTests/Pods-UpgradeiOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		4B6AD947B38EE26B23E51597 /* Pods-UpgradeiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpgradeiOSTests.release.xcconfig"; path = "Target Support Files/Pods-UpgradeiOSTests/Pods-UpgradeiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 		574E7FCAF1C17687775C6421 /* Pods-UpgradeiOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UpgradeiOS.release.xcconfig"; path = "Target Support Files/Pods-UpgradeiOS/Pods-UpgradeiOS.release.xcconfig"; sourceTree = "<group>"; };
+		8515966429A85DD300A6DEB0 /* SplashController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SplashController.h; sourceTree = "<group>"; };
+		8515966529A85DD300A6DEB0 /* SplashController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SplashController.m; sourceTree = "<group>"; };
+		8515966929A8634B00A6DEB0 /* DateUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DateUtil.h; sourceTree = "<group>"; };
+		8515966A29A8634B00A6DEB0 /* DateUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DateUtil.m; sourceTree = "<group>"; };
+		8515966D29A867E900A6DEB0 /* R.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = R.h; sourceTree = SOURCE_ROOT; };
+		8515966E29A867E900A6DEB0 /* R.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = R.m; sourceTree = SOURCE_ROOT; };
 		85E1D73529A7337D001728F8 /* UpgradeiOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UpgradeiOS.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		85E1D73829A7337D001728F8 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		85E1D73929A7337D001728F8 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -138,6 +147,49 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		8515966129A85D5F00A6DEB0 /* 01Component */ = {
+			isa = PBXGroup;
+			children = (
+				8515966229A85D8700A6DEB0 /* 00Splash */,
+				85E1D76D29A7344B001728F8 /* 01LetterIndexBar */,
+			);
+			path = 01Component;
+			sourceTree = "<group>";
+		};
+		8515966229A85D8700A6DEB0 /* 00Splash */ = {
+			isa = PBXGroup;
+			children = (
+				8515966329A85DA800A6DEB0 /* Controller */,
+			);
+			path = 00Splash;
+			sourceTree = "<group>";
+		};
+		8515966329A85DA800A6DEB0 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8515966429A85DD300A6DEB0 /* SplashController.h */,
+				8515966529A85DD300A6DEB0 /* SplashController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8515966729A8632C00A6DEB0 /* Vender */ = {
+			isa = PBXGroup;
+			children = (
+				8515966829A8633300A6DEB0 /* Date */,
+			);
+			path = Vender;
+			sourceTree = "<group>";
+		};
+		8515966829A8633300A6DEB0 /* Date */ = {
+			isa = PBXGroup;
+			children = (
+				8515966929A8634B00A6DEB0 /* DateUtil.h */,
+				8515966A29A8634B00A6DEB0 /* DateUtil.m */,
+			);
+			path = Date;
+			sourceTree = "<group>";
+		};
 		85E1D72C29A7337D001728F8 = {
 			isa = PBXGroup;
 			children = (
@@ -164,7 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				85E1D77729A73C47001728F8 /* 00Base */,
-				85E1D76D29A7344B001728F8 /* 01LetterIndexBar */,
+				8515966129A85D5F00A6DEB0 /* 01Component */,
 				85E1D73829A7337D001728F8 /* AppDelegate.h */,
 				85E1D73929A7337D001728F8 /* AppDelegate.m */,
 				85E1D73E29A7337D001728F8 /* ViewController.h */,
@@ -173,6 +225,8 @@
 				85E1D74629A73383001728F8 /* LaunchScreen.storyboard */,
 				85E1D74929A73383001728F8 /* Info.plist */,
 				85E1D74A29A73383001728F8 /* main.m */,
+				8515966D29A867E900A6DEB0 /* R.h */,
+				8515966E29A867E900A6DEB0 /* R.m */,
 			);
 			path = UpgradeiOS;
 			sourceTree = "<group>";
@@ -209,6 +263,7 @@
 		85E1D77729A73C47001728F8 /* 00Base */ = {
 			isa = PBXGroup;
 			children = (
+				8515966729A8632C00A6DEB0 /* Vender */,
 				85E1D79129A793DD001728F8 /* Data */,
 				85E1D78229A78942001728F8 /* Models */,
 				85E1D77829A73C56001728F8 /* Controllers */,
@@ -313,6 +368,7 @@
 			buildConfigurationList = 85E1D76429A73383001728F8 /* Build configuration list for PBXNativeTarget "UpgradeiOS" */;
 			buildPhases = (
 				53FAF26006A0CCE587590C5E /* [CP] Check Pods Manifest.lock */,
+				8515966C29A8677F00A6DEB0 /* ShellScript */,
 				85E1D73129A7337D001728F8 /* Sources */,
 				85E1D73229A7337D001728F8 /* Frameworks */,
 				85E1D73329A7337D001728F8 /* Resources */,
@@ -496,6 +552,23 @@
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
+		8515966C29A8677F00A6DEB0 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Type a script or drag a script file from your workspace to insert its path.\n\"${PODS_ROOT}/R.objc/Robjc\" -p \"$SRCROOT\" --skip-themes\n";
+		};
 		9A8B463D93A15D0B1B3761D8 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -543,6 +616,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				85E1D78829A78BC5001728F8 /* ModelBaseResult.m in Sources */,
+				8515966B29A8634B00A6DEB0 /* DateUtil.m in Sources */,
 				85E1D77329A73506001728F8 /* ViewReusablePool.m in Sources */,
 				85E1D77E29A73E71001728F8 /* BaseCommonController.m in Sources */,
 				85E1D78529A78BB0001728F8 /* ModelBaseParam.m in Sources */,
@@ -554,6 +628,8 @@
 				85E1D77229A73506001728F8 /* IndexTableView.m in Sources */,
 				85E1D74B29A73383001728F8 /* main.m in Sources */,
 				85E1D78F29A78E88001728F8 /* ModelLetterIndex.m in Sources */,
+				8515966F29A867E900A6DEB0 /* R.m in Sources */,
+				8515966629A85DD300A6DEB0 /* SplashController.m in Sources */,
 				85E1D79729A799F5001728F8 /* ModelLetterBarResult.m in Sources */,
 				85E1D77629A7353D001728F8 /* LetterIndexViewController.m in Sources */,
 			);

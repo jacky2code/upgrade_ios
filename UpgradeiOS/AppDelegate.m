@@ -7,6 +7,8 @@
 
 #import "AppDelegate.h"
 #import "ViewController.h"
+#import "SplashController.h"
+#import "LetterIndexViewController.h"
 
 @interface AppDelegate ()
 
@@ -18,9 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
 
-    ViewController *rootVc = [[ViewController alloc]init];
-    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVc];
-    [self.window setRootViewController:rootNav];
+    LetterIndexViewController *rootVc = [[LetterIndexViewController alloc]init];
+//    UINavigationController *rootNav = [[UINavigationController alloc]initWithRootViewController:rootVc];
+    [self.window setRootViewController:rootVc];
     [self.window makeKeyAndVisible];
     
     return YES;

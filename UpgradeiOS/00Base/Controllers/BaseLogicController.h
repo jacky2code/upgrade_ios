@@ -29,17 +29,17 @@ NS_ASSUME_NONNULL_BEGIN
 /// 数据
 @property (nonatomic, strong) NSMutableArray *dataSource;
 
-/// MARK: - 初始化RelativeLayout容器，四边都在安全区内
-- (void)initRelativeLayoutSafeArea;
-
 /// MARK: - 初始化垂直方向的 LinearLayout 容器
 - (void)initLinearLayout;
 
-/// MARK: - 头部容器，安全区外，用来设置头部到安全区外背景颜色
-- (void)initHeaderContainer;
+/// MARK: - 初始化RelativeLayout容器，四边都在安全区内
+- (void)initRelativeLayoutSafeArea;
 
-/// MARK: - 底部容器，安全区外，用来设置底部到安全区外背景颜色
-- (void)initFooterContainer;
+///// MARK: - 头部容器，安全区外，用来设置头部到安全区外背景颜色
+//- (void)initHeaderContainer;
+//
+///// MARK: - 底部容器，安全区外，用来设置底部到安全区外背景颜色
+//- (void)initFooterContainer;
 
 @end
 

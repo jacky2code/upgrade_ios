@@ -8,6 +8,8 @@ target 'UpgradeiOS' do
   # Pods for UpgradeiOS
   pod 'MyLayout'
   pod 'YYModel'
+  pod 'QMUIKit'
+  pod 'R.objc'
 
   target 'UpgradeiOSTests' do
     inherit! :search_paths

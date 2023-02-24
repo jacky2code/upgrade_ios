@@ -22,11 +22,65 @@
   ```
 
   - 自定义 UI 
-    - 字母索引条
+    - 字母索引条，示例： 01LetterIndexBar
 
 - 数据源同步
 
-- 
+  多线程访问数据，数据源同步问题，解决方案
+
+  1. 并发访问，数据拷贝
+
+     - 主线程在子线程请求网络数据、解析数据、预排版的时候修改了数据，子线程完成操作后把未修改的数据又传给主线程，造成了数据源不同步，通过子线程在返回数据前**同步主线程的（删除等）操作**，实现数据源同步。
+     - 数据拷贝，可能会造成大量内存使用
+  
+     
+  
+     ```mermaid
+     sequenceDiagram
+         participant A as 主线程
+         participant B as 子线程
+         A ->> A: 数据拷贝
+         A ->> + B: 子线程使用数据
+         B ->> B: 网络请求
+         Note left of A: 主线程更改数据
+         A ->> A: 删除一行数据
+         A -->> A: 记录删除操作
+         B ->> B: 数据解析
+         A ->> A: reload UI
+         B ->> B: 预排版等
+         A ->> A: other work
+         A -->> A: 记录other操作
+         B -->> B: 同步主线程操作
+         B -->> -A: 返回处理后的数据
+         Note right of B: 子线程返回数据前要同步主线程的操作
+         A ->> A: reload UI
+         
+     ```
+  
+     
+  
+  2. 串行访问
+  
+     - 可能会造成延时
+  
+     ```mermaid
+     sequenceDiagram
+         participant A as 主线程
+         participant B as 串行队列
+         participant C as 子线程
+         C ->> C: 网络请求、数据解析
+         C ->> +B: 新增数据传递
+         B ->> B: 新增数据排版等
+         A ->> A: 删除某一行
+         A ->> A: 等待一会
+         A -->> B: 传数据
+         B ->> B: 同步删除数据
+         B ->> - A: 返回数据
+         A ->> A: reload UI
+         
+     ```
+  
+     
 
 ### 事件传递&视图响应
 

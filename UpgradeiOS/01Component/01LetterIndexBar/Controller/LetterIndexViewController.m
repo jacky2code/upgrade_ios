@@ -25,7 +25,6 @@
     tableView = [[IndexTableView alloc] initWithFrame:CGRectMake(0, 60, self.view.frame.size.width, self.view.frame.size.height - 60) style:UITableViewStylePlain];
     tableView.delegate = self;
     tableView.dataSource = self;
-    
     tableView.indexTableViewDataSource = self;
     
     [self.view addSubview:tableView];

@@ -13,10 +13,10 @@
 
 @implementation BaseCommonController
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    [self setBackgroundColor:UIColor.whiteColor];
-}
+//- (void)viewDidLoad {
+//    [super viewDidLoad];
+//    [self setBackgroundColor:UIColor.whiteColor];
+//}
 
 // MARK: - 设置背景颜色
 - (void)setBackgroundColor:(UIColor *)color {

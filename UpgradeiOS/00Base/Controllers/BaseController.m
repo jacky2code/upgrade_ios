@@ -15,20 +15,23 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    NSLog(@"=== BaseController viewDidLoad ===");
     [self initViews];
     [self initDatas];
     [self initListeners];
-    
 }
 
 /// MARK: - 控件布局
 - (void)initViews {
+    NSLog(@"=== BaseController initViews ===");
 }
 /// MARK: - 设置数据
 - (void)initDatas {
+    NSLog(@"=== BaseController initDatas ===");
 }
 /// MARK: - 设置监听器
 - (void)initListeners {
+    NSLog(@"=== BaseController initListeners ===");
 }
 
 @end

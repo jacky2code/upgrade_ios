@@ -9,7 +9,7 @@
 #import "BaseLogicController.h"
 
 @interface ViewController : BaseLogicController
-
-
+@property (nonatomic, strong) UITableView *tableView;
+@property (nonatomic, strong) NSMutableDictionary *dataDict;
 @end
 
