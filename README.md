@@ -84,7 +84,51 @@
 
 ### 事件传递&视图响应
 
+- UIView 和 CALayer 关系
+
+  UIView 为 layer 提供内容，以及负责处理触摸等事件，参与响应链；CALayer 负责显示内容 Contents。
+
+  体现设计原则，单一职责原则
+
+- 事件传递
+
+  ```objc
+  // 返回响应事件的视图
+  - (UIView *)hitTest:(CGPoint)point withEvent:(UIEvent *)event;
+  // 点击位置是否在视图范围内
+  - (BOOL)pointInside(CGPoint)point withEvent:(UIEvent *)event;
+  
+  ```
+
+  ```mermaid
+  graph LR
+  点击屏幕-->UIApplication-->UIWindow-->hitTest:withEvent:-->pointInside:withEvent:-->Subviews倒序遍历子view-- 调用 --->hit=[sub hitTest:p withEvent:e]
+  
+  ```
+
+  ```mermaid
+  graph TB
+  	A(start) --> B{!v.hidden&&v.userInterfaceEnable&&v.alpha>0.01}-- Y -->
+  	C{v.pointInside:pointwithEvent:e} -- 通过 --> D{倒序循环subviews} -- 通过-->E[子视图调用hitTest]
+  ```
+
+  
+
 ### 图像显示原理
+
+CPU 和 GPU 通过总线连接起来，CPU 中的位图通过总线上传到GPU进行图层渲染和纹理合成，之后将结果上传至缓冲区 Frame Buffer 中，由视频控制器在指定时间之前提取缓冲区的显示内容最终显示到显示器上。
+
+<img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2023/03/17/20230317175222.png" alt="image-20230317175213488" style="zoom:50%;" />
+
+<img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2023/03/17/20230317175604.png" alt="image-20230317175602508" style="zoom:50%;" />
+
+#### CPU 工作
+
+<img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2023/03/17/20230317180823.jpg" alt="CPU_Work" style="zoom:50%;" />
+
+#### GPU 渲染管线
+
+<img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2023/03/17/20230317181029.png" alt="image-20230317181027898" style="zoom:50%;" />
 
 ### UI 卡顿、掉帧
 
