@@ -132,6 +132,12 @@ CPU 和 GPU 通过总线连接起来，CPU 中的位图通过总线上传到GPU�
 
 ### UI 卡顿、掉帧
 
+#### 原因
+
+每个信号区间，CPU 和 GPU 计算时间超过每秒60帧（16.7ms)
+
+<img src="https://markdown-res.oss-cn-hangzhou.aliyuncs.com/mdImgs/2023/03/17/20230317182733.png" alt="image-20230317182731832" style="zoom:50%;" />
+
 ### UI绘制原理/异步绘制
 
 ### 离屏渲染
